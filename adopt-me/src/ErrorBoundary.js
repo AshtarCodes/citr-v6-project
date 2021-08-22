@@ -13,7 +13,7 @@ class ErrorBoundary extends Component {
   componentDidCatch(error, info) {
     /* log this to an error monitoring service: Sentry, Azure Monitor, New Relic, TrackJS */
     console.error("ErrorBoundary caught an error: ", error, info);
-    setTimeout(this.setState({ redirect: true }), 5000);
+    setTimeout(() => this.setState({ redirect: true }), 5000);
   }
 
   //   doesn't work because ComponentDidUpdate won't run on the first render.

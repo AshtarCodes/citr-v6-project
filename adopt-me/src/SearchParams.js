@@ -95,22 +95,24 @@ const SearchParams = () => {
           </select>
         </label>
 
-        <label htmlFor="theme" >
+        <label htmlFor="theme">
           Theme
-          <select id="theme" value={theme} 
-          onChange={(e) => setTheme(e.target.value)}
-          // onBlur added for a11y, improves screenreader exp
-          onBlur={(e) => setTheme(e.target.value)}
+          <select
+            id="theme"
+            value={theme}
+            onChange={(e) => setTheme(e.target.value)}
+            // onBlur added for a11y, improves screenreader exp
+            onBlur={(e) => setTheme(e.target.value)}
           >
-          <option />
-          {
-            ['pink','darkblue','lavender','darkred'].map(color => {
-            return ( <option value={color} key={color}>
-                {color}
-              </option>)
-            })
-          }
-        </ select>
+            <option />
+            {["pink", "darkblue", "lavender", "darkred"].map((color) => {
+              return (
+                <option value={color} key={color}>
+                  {color}
+                </option>
+              );
+            })}
+          </select>
         </label>
 
         <button style={{ backgroundColor: theme }}>Submit</button>
