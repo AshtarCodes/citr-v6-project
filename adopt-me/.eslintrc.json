@@ -3,6 +3,7 @@
     "eslint:recommended",
     "plugin:import/errors",
     "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
     "plugin:jsx-a11y/recommended",
     "prettier"
   ],
@@ -11,6 +12,7 @@
     "react/react-in-jsx-scope": 0
   },
   "plugins": ["react", "import", "jsx-a11y"],
+  "parser": "@babel/eslint-parser" /* tells eslint to run code through babel prior to parsing, using this parser (only for really recent JS) */,
   "parserOptions": {
     "ecmaVersion": 2021,
     "sourceType": "module",
